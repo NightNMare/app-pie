@@ -1,5 +1,6 @@
 package com.example.dlarb.viewpager;
 
+import android.content.ClipData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +11,9 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
 
+    ArrayList<Data> items = new ArrayList<>();
 
-    ArrayList<String> items = new ArrayList<>();
-
-    public CustomAdapter(ArrayList<String> items) {
+    public CustomAdapter(ArrayList<Data> items) {
         this.items = items;
     }
 
@@ -33,10 +33,15 @@ public class CustomAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,null);
-        TextView diary = (TextView) v.findViewById(R.id.context);
-        diary.setText(items.get(i));
+
+        TextView up = (TextView) v.findViewById(R.id.context);
+        TextView down = (TextView) v.findViewById(R.id.context1);
+
+        up.setText(items.get(position).big);
+        down.setText(items.get(position).small);
+
         return v;
     }
 }

@@ -11,30 +11,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"
-        android:weightSum="10">
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:weightSum="2">
 
-        <EditText
-            android:id="@+id/edtxt"
-            android:layout_width="0dip"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_weight="6"
-            android:hint="값을 입력하세요." />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
 
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="0dip"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_weight="2"
-            android:text="OK"
-            android:textSize="20sp" />
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="0dip"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_weight="2"
-            android:text="Reset"
-            android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edtxt"
+                android:layout_width="0dip"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="6"
+                android:hint="날짜를 입력하세요." />
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="0dip"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="2"
+                android:text="OK"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edtxt1"
+                android:layout_width="0dip"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="6"
+                android:hint="값을 입력하세요." />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dip"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="2"
+                android:text="Reset"
+                android:textSize="15sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <ListView
