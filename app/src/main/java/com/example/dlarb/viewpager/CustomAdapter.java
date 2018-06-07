@@ -1,6 +1,5 @@
 package com.example.dlarb.viewpager;
 
-import android.content.ClipData;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
 
-    ArrayList<Data> items = new ArrayList<>();
+    ArrayList<Data> items;
 
     public CustomAdapter(ArrayList<Data> items) {
         this.items = items;
